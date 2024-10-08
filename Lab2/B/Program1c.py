@@ -1,0 +1,5 @@
+initial_production_rate = float(input("Please input the initial production rate in barrels/day: "))
+decline_rate = float(input("Please input the decline rate: "))
+hyperbolic_constant = float(input("Please input the hyperbolic constant: "))
+days = float(input("Please input the number of days: "))
+print(f"The production after {days} day(s) is {initial_production_rate / ((1 + hyperbolic_constant * decline_rate * days) ** (1 / hyperbolic_constant))} barrels/day.")
