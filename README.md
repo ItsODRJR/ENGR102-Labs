@@ -1,4 +1,4 @@
-# Texas A&M ENGR102 Labs
+# Texas A&M University ENGR102 Labs
 
 Archive of all my code submitted to my ENGR102 course.
 
