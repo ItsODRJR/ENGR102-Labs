@@ -1,16 +1,13 @@
 import math
 
-vectorA = [int(x) for x in input("Enter another 2D or 3D vector (x x) / (x x x): ").split()]  
-if len(vectorA) == 3:
-    vectorB = [int(x) for x in input("Enter another 3D vector (x x x: ").split()]  
-elif len(vectorA):
-    vectorB = [int(x) for x in input("Enter another 2D vector (x x): ").split()]     
-else:
-    print("Error creation first vector. Please try again.")    
+vectorA = [int(x) for x in input("Enter a vector (x1 x2 x3 ...): ").split()]
+vectorB = [int(x) for x in input(f"Enter another vector of the same dimension ({len(vectorA)}D): ").split()]
 
-if len(vectorA) == len(vectorB):
-    print(f"Magnitude of A: {math.sqrt((vectorA[0] * vectorA[0]) + (vectorA[1] * vectorA[1]) + (vectorA[2] * vectorA[2] if len(vectorA) == 3 else 0))}")
-    print(f"Magnitude of B: {math.sqrt((vectorB[0] * vectorB[0]) + (vectorB[1] * vectorB[1]) + (vectorB[2] * vectorB[2] if len(vectorA) == 3 else 0))}")
-    print(f"A + B: ({vectorA[0] + vectorB[0]}, {vectorA[1] + vectorB[1]}{', ' + vectorA[2] + vectorB[2] if len(vectorA) == 3 else ''})")
-    print(f"A - B: ({vectorA[0] - vectorB[0]}, {vectorA[1] - vectorB[1]}{', ' + vectorA[2] - vectorB[2] if len(vectorA) == 3 else ''})")
-    print(f"Dot Product of A and B: {(vectorA[0] * vectorB[0]) + (vectorA[1] * vectorB[1]) + (vectorA[2] * vectorB[2] if len(vectorA) == 3 else 0)}")
+if len(vectorA) != len(vectorB):
+    print("Error: Vectors must be of the same dimension.")
+else:
+    print(f"Magnitude of A: {math.sqrt(sum([vectorA[i] ** 2 for i in range(len(vectorA))]))}")
+    print(f"Magnitude of B: {math.sqrt(sum([vectorB[i] ** 2 for i in range(len(vectorB))]))}")
+    print(f"A + B: {[vectorA[i] + vectorB[i] for i in range(len(vectorA))]}")
+    print(f"A - B: {[vectorA[i] - vectorB[i] for i in range(len(vectorA))]}")
+    print(f"Dot Product of A and B: {sum([vectorA[i] * vectorB[i] for i in range(len(vectorA))])}")
