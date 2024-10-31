@@ -1,15 +1,3 @@
-# By submitting this assignment, all team members agree to the following:
-# “Aggies do not lie, cheat, or steal, or tolerate those who do”
-# “I have not given or received any unauthorized aid on this assignment”
-#
-# Names: OSCAR RODRIGUEZ (635007029)
-# THANG CHAU (335000995)
-# NATHANIEL ALVARENGA (735000064)
-# JONATHAN BOZONE (835005736)
-# Section: ENGR-102-551
-# Assignment: Lab11A
-# Date: 30/10/24
-
 validCount = 0
 validPassports = []
 
