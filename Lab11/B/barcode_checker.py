@@ -1,10 +1,12 @@
 def isValid(barcode):
     oddSum = sum(int(barcode[i]) for i in range(0, 12, 2))
     evenSum = sum(int(barcode[i]) for i in range(1, 12, 2)) * 3
-    check_digit = (10 - (oddSum + evenSum) % 10)
+    check_digit = (10 - (oddSum + evenSum) % 10) % 10
     return check_digit == int(barcode[-1])
 
-with open("barcodes.txt", 'r') as file:
+text_input = input("Input the file name: ")    
+
+with open(text_input, 'r') as file:
     barcodes = file.read().splitlines()
 
 validBarcodes = [barcode for barcode in barcodes if isValid(barcode)]
