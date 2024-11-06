@@ -1,5 +1,7 @@
-given = open("pixel_triangle.csv")
+user_csv_input = input("Input the filename: ")
+given = open(user_csv_input)
 user_input = input("Input a letter: ")
+lines = []
 
 for i in given:
     string = ""
@@ -9,6 +11,10 @@ for i in given:
     for i,v in enumerate(tbl):
         for k in range(int(v)):
                 string += " " if int(i) % 2 == 0 else user_input
-    print(string)
+    lines.append(string)
+    
+with open(user_csv_input.split(".")[0] + ".txt", 'w') as art_file:
+        for i,v in enumerate(lines):
+              art_file.write(v + "\n")
 
 given.close()
