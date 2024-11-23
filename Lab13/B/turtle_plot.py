@@ -1,12 +1,3 @@
-# By submitting this assignment, all team members agree to the following:
-# “Aggies do not lie, cheat, or steal, or tolerate those who do”
-# “I have not given or received any unauthorized aid on this assignment”
-#
-# Name: OSCAR RODRIGUEZ (635007029)
-# Section: ENGR102-551
-# Assignment: Lab13B
-# Date: 18/11/24
-
 import turtle
 import random
 
